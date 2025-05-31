@@ -1,0 +1,26 @@
+{
+  "name": "back",
+  "version": "1.0.0",
+  "description": "backend for prayers api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "maryam": "nodemon app.js"
+  },
+  "author": "maryam kafel",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cron": "^4.3.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.14.1",
+    "node-cron": "^4.0.6"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
