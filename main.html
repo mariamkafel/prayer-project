@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prayer Management System</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!--Login/Signup Pages-->
+    <div id="auth-page" class="page active">
+      <div class="auth-container">
+        <div class="auth-header">
+          <h1>Prayer Management</h1>
+          <p>Manage your daily prayers</p>
+        </div>
+
+        <div class="auth-tabs">
+          <button class="tab-btn active" onclick="showLogin()">Login</button>
+          <button class="tab-btn" onclick="showSignup()">Sign Up</button>
+        </div>
+
+        <!--Login-->
+        <form id="login-form" class="auth-form active">
+          <h2>Welcome Back</h2>
+          <div class="form-group">
+            <label for="login-username">Username</label>
+            <input type="text" id="login-username" required />
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" required />
+          </div>
+          <button type="submit" class="btn btn-primary">Login</button>
+          <div id="login-error" class="error-message"></div>
+        </form>
+
+        <!--Signup-->
+        <form id="signup-form" class="auth-form">
+          <h2>Create Account</h2>
+          <div class="form-group">
+            <label for="signup-username">Username</label>
+            <input type="text" id="signup-username" required />
+          </div>
+          <div class="form-group">
+            <label for="signup-email">Email</label>
+            <input type="email" id="signup-email" required />
+          </div>
+          <div class="form-group">
+            <label for="signup-password">Password</label>
+            <input type="password" id="signup-password" required />
+          </div>
+          <button type="submit" class="btn btn-primary">Sign Up</button>
+          <div id="signup-error" class="error-message"></div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Dashboard Page -->
+    <div id="dashboard-page" class="page">
+      <header class="dashboard-header">
+        <div class="header-content">
+          <h1>Prayer Dashboard</h1>
+          <div class="user-info">
+            <span id="user-name">Welcome, User</span>
+            <button class="btn btn-secondary" onclick="logout()">Logout</button>
+          </div>
+        </div>
+      </header>
+
+      <main class="dashboard-main">
+        <div class="dashboard-container">
+          <!-- Add Prayer Section -->
+           
+          <section class="add-prayer-section">
+            <h2>Add New Prayer</h2>
+            <form id="prayer-form" class="prayer-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="prayer-name">Prayer Name</label>
+                  <input
+                    type="text"
+                    id="prayer-name"
+                    placeholder="e.g., Fajr, Dhuhr, Asr..."
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="prayer-time">Prayer Time</label>
+                  <input type="time" id="prayer-time" required />
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Add Prayer</button>
+              <div id="prayer-error" class="error-message"></div>
+              <div id="prayer-success" class="success-message"></div>
+            </form>
+          </section>
+
+          <!-- Prayers List Section -->
+          <section class="prayers-section">
+            <div class="section-header">
+              <h2>Your Prayers</h2>
+              <button class="btn btn-secondary" onclick="loadPrayers()">
+                Refresh
+              </button>
+            </div>
+            <div id="prayers-list" class="prayers-list">
+              <div class="loading">Loading prayers...</div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
