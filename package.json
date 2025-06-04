@@ -2,7 +2,7 @@
   "name": "back",
   "version": "1.0.0",
   "description": "backend for prayers api",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "maryam": "nodemon app.js"
@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
     "cron": "^4.3.0",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
